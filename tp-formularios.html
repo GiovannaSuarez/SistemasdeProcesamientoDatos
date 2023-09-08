@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Giovanna Suarez"> 
+        <title>Trabajo Práctico de Formularios HTML5</title>
+
+    <script>
+        function respuestas(){
+            vnombre = document.getElementById("nombre").value;
+		    vapellido = document.getElementById("apellido").value;
+		    vdni = document.getElementById("dni").value;
+            vfechanacimiento = document.getElementById("fechaNacimiento").value;              
+            vdomicilio = document.getElementById("domicilio").value;
+            vlocalidad = document.getElementById("localidad").value;
+
+			var vidiomas = document.getElementById("idiomas");
+			var vidiomas = vidiomas.options[vidiomas.selectedIndex].value;
+		
+
+	        
+            document.write(varIdiomas+": "+varespañol);
+            document.write("Los datos ingresados fueron: <br/>");
+            document.write("Nombre: "+vnombre+"<br/>");
+		    document.write("Apellido: "+vapellido+"<br/>");
+	    	document.write("Número de DNI: "+vdni+"<br/>");
+            document.write("Fecha de nacimiento: "+vfechanacimiento+"<br/>");
+            document.write("Domicilio: "+vdomicilio+"<br/>");
+            document.write("Localidad: "+vlocalidad+"<br/>");
+            document.write("<br/><strong>Gracias por sus datos</strong>");
+        }
+    </script>
+    </head>
+
+    <body>  
+            <h1>
+                Formulario Carga de Datos
+            </h1>
+            <form>
+                <p>
+                    <label form="nombre">Nombre:</label>
+                    <input type="text" id="nombre">
+                    <label form="Apellido">Apellido:</label>
+                    <input type="text" id="apellido">
+                </p>
+                <p>
+                    <label form="numerodni">Número de DNI:</label>
+                    <input type="number" id="dni">
+                    <label form="fechaNacimiento">Fecha de Nacimiento:</label>           
+                    <input type="date" id="fechaNacimiento">
+                </p>
+                <p>
+                    <label form="domicilio">Domicilio:</label>
+                    <input type="text" id="domicilio">
+                    <label form="localidad">Localidad:</label>
+                    <input type="text" id="localidad">
+                </p>
+                <h2>Idiomas que conoce</h2>
+                <div name="idiomas" id="idiomas">
+                    <p>
+                        <input type="checkbox" id="box1" value="español">
+                        <label for="box1"> Español </label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="box2" value="ingles">
+                        <label for="box2"> Inglés</label>
+                    </p>
+                    <p>
+                        
+                        <input type="checkbox"  id="box3" value="frances">
+                        <label for="box3"> Francés </label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="box4" value="chino">
+                        <label for="box4"> Chino </label>
+                    </p>
+                </div>    
+            <div name="porcentaje" id="porcentajes">
+                <h3>Nivel de conocimiento</h3>
+                <div class="progress-bar">
+                    <label for=""> Español </label>
+                    <input type="range" id="nivelespañol">
+                </div>
+                <div class="progress-bar">
+                    <label for=""> Inglés </label>
+                    <input type="range" id="nivelingles">
+                </div>
+                <div class="progress-bar">
+                    <label for=""> Francés </label>
+                    <input type="range"  id="nivelingles">
+                </div>
+                <div class="progress-bar">
+                    <label for=""> Chino </label>
+                    <input type="range"  id="nivelchino">
+                </div>
+            </div>    
+            <p><strong>Botones de acción</strong></p>
+            <button type="submit" onClick="respuestas()">Enviar y Mostrar</button>
+            <button type="reset">Borrar</button>
+        </form>
+    
+    </body>
+
+</html>
